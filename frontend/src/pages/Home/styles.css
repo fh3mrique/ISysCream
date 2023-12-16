@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+.home-container{
+    width: 100%;
+    height: 85vh;
+    font-family: 'Lilita One', sans-serif;
+    background-color: rgb(241, 189, 197);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.home-text-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.home-text-container h1 {
+    color: white;
+    font-size: 5rem;
+}
+
+.btn-home button{
+    text-transform: uppercase;
+    height: 55px;
+    width: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: solid 3px white;
+    font-family: 'Lilita One', sans-serif;
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.btn-home button:hover{
+    transition: ease-out 0.65s;
+    background-color: white;
+    color: rgb(184, 54, 75);
+}
+
+.img-home-container {
+
+background-color: rgb(184, 54, 75);
+border-radius: 100%;
+margin-left: 40px;
+}
+
+.img-home-container img{
+    width: 560px;
+    height: 560px;
+}

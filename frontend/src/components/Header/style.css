@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+.header-container{
+    width: 100%;
+    background-color: rgb(241, 189, 197);
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    column-gap: 15px;
+    padding-left: 50px;
+}
+
+.header-container header{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-family: 'Lilita One', sans-serif;
+    color: rgb(236, 151, 165);
+}
+
+h1 span{
+    color: rgb(226, 85, 109);
+}
