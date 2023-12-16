@@ -3,6 +3,7 @@ package com.filipehenrique.ISysCream.controllers;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,20 +12,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.filipehenrique.ISysCream.entities.TipoSorvete;
-import com.filipehenrique.ISysCream.services.TipoSorveteService;
+import com.filipehenrique.ISysCream.entities.Sabor;
+import com.filipehenrique.ISysCream.services.SaborService;
 
 @RestController
-@RequestMapping("/tiposorvete")
-public class TipoSorveteController {
+@RequestMapping("/sabor")
+public class SaborController {
+	
+	@Autowired
+	private SaborService saborService;
 	
 
 	@PostMapping
-	public ResponseEntity<TipoSorvete> insert (@RequestBody TipoSorvete tipoSorvete){
-		
+	public ResponseEntity<Sabor> insert (@RequestBody Sabor sabor){		
 		try {
-			TipoSorveteService.getCurrentInstance().insert(tipoSorvete);
-			return ResponseEntity.status(HttpStatus.CREATED).body(tipoSorvete);
+			saborService.insert(sabor);
+			return ResponseEntity.status(HttpStatus.CREATED).body(sabor);
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -33,11 +36,11 @@ public class TipoSorveteController {
 	}
 	
 	@GetMapping
-	public ResponseEntity<List<TipoSorvete>> findAll(){
+	public ResponseEntity<List<Sabor>> findAll(){
 		
 		try {
-			List<TipoSorvete> tiposSorvete =  TipoSorveteService.getCurrentInstance().findAll();
-			return ResponseEntity.ok(tiposSorvete);
+			List<Sabor> sabores=  saborService.findAll();
+			return ResponseEntity.ok(sabores);
 			
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -27,6 +27,8 @@ public class TipoSorveteService {
 				
 		}
 		//fim da implementação do singleton
+	
+		
 		
 		
 		public void insert(TipoSorvete t) throws SQLException {

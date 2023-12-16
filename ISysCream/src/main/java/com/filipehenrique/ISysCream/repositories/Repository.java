@@ -3,6 +3,7 @@ package com.filipehenrique.ISysCream.repositories;
 import java.sql.SQLException;
 import java.util.List;
 
+@org.springframework.stereotype.Repository
 public interface Repository<T> {
 	
 	public void insert(T t) throws SQLException;
