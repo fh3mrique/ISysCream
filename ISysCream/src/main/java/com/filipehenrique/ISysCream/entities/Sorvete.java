@@ -1,14 +1,17 @@
 package com.filipehenrique.ISysCream.entities;
 
-import java.time.LocalDate;
 import java.util.List;
 
 public class Sorvete {
 
 	private Integer id;
+	private long dataVenda;
     private TipoSorvete tipoSorvete;
-    private LocalDate dataVenda;
     private List<Sabor> sabores;
+    
+    public Sorvete() {
+    	
+    }
     
 	public Integer getId() {
 		return id;
@@ -22,10 +25,10 @@ public class Sorvete {
 	public void setTipoSorvete(TipoSorvete tipoSorvete) {
 		this.tipoSorvete = tipoSorvete;
 	}
-	public LocalDate getDataVenda() {
+	public long getDataVenda() {
 		return dataVenda;
 	}
-	public void setDataVenda(LocalDate dataVenda) {
+	public void Instant(long dataVenda) {
 		this.dataVenda = dataVenda;
 	}
 	public List<Sabor> getSabores() {
