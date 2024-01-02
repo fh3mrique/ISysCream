@@ -2,19 +2,19 @@ package com.filipehenrique.ISysCream.entities;
 
 public class TipoSorvete {
 	
-	private Integer id;
-	private String tipo;
-	private Integer quantBolas;
-	private Double peso;
-	private String descricao;
-	private Double valor;
+	private Integer id_TipoSorvete;
+    private String tipo;
+    private Integer quantBolas;
+    private Double peso;
+    private String descricao;
+    private Double valor;
 	
 	public TipoSorvete() {
 		
 	}
 	
 	public TipoSorvete(Integer id, String tipo, Integer quantBolas, Double peso, String descricao, Double valor) {
-		this.id = id;
+		this.id_TipoSorvete = id;
 		this.tipo = tipo;
 		this.quantBolas = quantBolas;
 		this.peso = peso;
@@ -22,12 +22,13 @@ public class TipoSorvete {
 		this.valor = valor;
 	}
 
+	
 	public Integer getId() {
-		return id;
+	    return id_TipoSorvete != null ? id_TipoSorvete : 0;
 	}
 
 	public void setId(Integer id) {
-		this.id = id;
+		this.id_TipoSorvete = id;
 	}
 
 	public String getTipo() {
@@ -68,5 +69,10 @@ public class TipoSorvete {
 
 	public void setValor(Double valor) {
 		this.valor = valor;
+	}
+
+	public void setId_TipoSorvete(int int1) {
+		// TODO Auto-generated method stub
+		
 	}
 }

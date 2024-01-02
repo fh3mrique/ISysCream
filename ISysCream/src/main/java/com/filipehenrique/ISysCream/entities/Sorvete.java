@@ -1,5 +1,6 @@
 package com.filipehenrique.ISysCream.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Sorvete {
@@ -10,7 +11,7 @@ public class Sorvete {
     private List<Sabor> sabores;
     
     public Sorvete() {
-    	
+        this.sabores = new ArrayList<>();
     }
     
 	public Integer getId() {
@@ -47,6 +48,18 @@ public class Sorvete {
 			sabores.subList(0, tipoSorvete.getQuantBolas());
 		}
 	}
+	
+	public Integer getTipoSorveteId() {
+        return (tipoSorvete != null) ? tipoSorvete.getId() : 0;
+    }
+
+    public List<Integer> getSaboresIds() {
+        return sabores.stream()
+                .map(Sabor::getId)
+                .collect(java.util.stream.Collectors.toList());
+    }
+	
+	
 	
 	
     
