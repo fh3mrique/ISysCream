@@ -6,8 +6,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.filipehenrique.ISysCream.entities.TipoSorvete;
 
+@Component
 public class TipoSorveteRepository implements Repository<TipoSorvete>{
 
 	@Override
@@ -54,7 +57,7 @@ public class TipoSorveteRepository implements Repository<TipoSorvete>{
 	}
 
 	@Override
-	public TipoSorvete findById(int codigo) throws SQLException {
+	public  TipoSorvete findById(int codigo) throws SQLException {
 		String sql ="select * from tiposorvete where id_TipoSorvete=?";
 		
 		PreparedStatement pstm = ConnectionManager
@@ -72,7 +75,7 @@ public class TipoSorveteRepository implements Repository<TipoSorvete>{
 			tipoSorvete.setQuantBolas(result.getInt("quant_Bolas"));
 			tipoSorvete.setPeso(result.getDouble("peso"));
 			tipoSorvete.setDescricao(result.getString("descricao"));
-			tipoSorvete.setPeso(result.getDouble("valor"));
+			tipoSorvete.setValor(result.getDouble("valor"));
 			
 			return tipoSorvete;
 			

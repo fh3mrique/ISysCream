@@ -5,7 +5,7 @@ import java.util.List;
 public class Sorvete {
 
 	private Integer id;
-	private long dataVenda;
+	private java.time.Instant dataVenda;
     private TipoSorvete tipoSorvete;
     private List<Sabor> sabores;
     
@@ -25,10 +25,10 @@ public class Sorvete {
 	public void setTipoSorvete(TipoSorvete tipoSorvete) {
 		this.tipoSorvete = tipoSorvete;
 	}
-	public long getDataVenda() {
+	public java.time.Instant getDataVenda() {
 		return dataVenda;
 	}
-	public void Instant(long dataVenda) {
+	public void Instant(java.time.Instant dataVenda) {
 		this.dataVenda = dataVenda;
 	}
 	public List<Sabor> getSabores() {
@@ -38,11 +38,17 @@ public class Sorvete {
 		this.sabores = sabores;
 	}
 	
+	public void setDataVenda(java.time.Instant instant) {
+		this.dataVenda = instant;
+	}
+
 	public void registrarSorvete() {
 		if (sabores.size() > tipoSorvete.getQuantBolas()) {
 			sabores.subList(0, tipoSorvete.getQuantBolas());
 		}
 	}
+	
+	
     
     
 }
